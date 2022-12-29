@@ -18,7 +18,7 @@
         <!-- <span class="timestamp">{{tweet.timestamp}}</span> -->
       </div>
 
-      <Message message="message" />
+      <Message :message="message" />
       <!-- <p class="message">
         {{tweet.message}}
       </p> -->
@@ -40,12 +40,16 @@
 
 export default {
   props: {
-    user: Object,
-    timestamp: String,
-    message: String
-    // tweet: {
-    //   type: Object
-    // }
+    tweet: {
+      type: Object
+    }
+  },
+  data(){
+    return {
+      user: this.tweet.user,
+      timestamp: this.tweet.timestamp,
+      message: this.tweet.message
+    }
   }
 }
 
