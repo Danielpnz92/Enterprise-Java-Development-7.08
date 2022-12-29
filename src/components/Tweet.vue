@@ -2,7 +2,7 @@
   <div class="tweet">
     <ProfileImage :image="user.image" />
     <!-- <img
-      :src="tweet.user.image"
+      :src="tweet.import cuser.image"
       class="profile"
       alt="profile"
     /> -->
@@ -37,15 +37,10 @@
 </template>
 
 <script>
-  import ProfileImage from './ProfileImage.vue';
-  import Message from './Message.vue';
-  import Actions from './Actions.vue';
-  import Timestamp from './Timestamp.vue';
-  import User from './User.vue';
 
 export default {
   props: {
-    user:  Object,
+    user: Object,
     timestamp: String,
     message: String
     // tweet: {
